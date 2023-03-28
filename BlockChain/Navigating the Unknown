@@ -1,0 +1,83 @@
+# Challenge Name: Navigating the Unknown
+
+**Category:** Blockchain  
+**Points:** 300  
+**Author:** LSTR - 512  
+**Team:** RAVEN-CyberSec
+**Completion Date:** 19/03/2023
+
+## Introduction
+
+Your advanced sensory systems make it easy for you to navigate familiar environments, but you must rely on intuition to navigate in unknown territories. Through practice and training, you must learn to read subtle cues and become comfortable in unpredictable situations. Can you use your software to find your way through the blocks?
+
+## Tools Used
+
+- netcat
+- [Tool 2]
+- [Tool 3]
+
+## Initial Analysis
+
+I was given two different IP addresses and port numbers. The first was a TCP (open) port. The second was a TCP (filtered) port. 
+
+## Detailed Methodology
+
+### Step 1: Auto-Recon
+
+
+### Step 2: Manually Interact with the Target
+
+I decided to check the two IP addresses. First used a netcat command to the TCP port 165.232.98.59:31678 
+Got 3 responses: 
+1) Connection information
+2) Restart Instance
+3) Get flag
+
+TCP Port Return
+1-> Private key     :  0xdc4f90ae96d3a8af7374a88dbb36ca69bb0cc6d858ef0500ddc155bbab920219
+    Address         :  0x57919733Aba4a311e541d8B8DC55eA34371f58B8
+    Target contract :  0x0098C793D56d76404f75031Fd498489B10A6D0B7
+    Setup contract  :  0x36A61cA28026F097cA230b6D2330910AD0bE9707
+2-> Restart done. Please retrieve the new connection information.
+3-> 
+1-> After restart :
+    Private key     :  0x7152369b55dd146458692da7d65a62687ef3a380b72d882ae4ddde308651a0b8
+    Address         :  0x07C143D22daB00A901B69f4A7b4B8E66BF47c344
+    Target contract :  0x7beFea016F816842C33b256CB73A82FC201b8Fee
+    Setup contract  :  0xa73649D35B40A2f9D755129F80CeF59562C09311
+
+When inserting action number that was not planned (1,2,3), the response was "can you not". 
+When inserting action large action number, there was no response
+
+Connection information changes after restart action.
+netcat command did not work against port 32394. 
+
+
+[Provide a clear explanation of the step, including commands, code snippets (if applicable), and reasoning behind the step. Include screenshots or images where appropriate to illustrate your process.]
+
+### Step 3: Identify technology stack
+
+Identify the technology stack of the application. This will help you understand how the application works and what are the possible vulnerabilities.
+
+### Step 4: Identify Potential Vulnerabilities
+[Provide a clear explanation of the step, including commands, code snippets (if applicable), and reasoning behind the step. Include screenshots or images where appropriate to illustrate your process.]
+- idor, because blabla 
+- weak auth, because blabla
+- xss, because blabla
+
+### Step 5: Exploitation
+[Provide a clear explanation of the step, including commands, code snippets (if applicable), and reasoning behind the step. Include screenshots or images where appropriate to illustrate your process.]
+
+#### Step 5a Exploitation of IDOR
+
+#### Step 5b Exploitation of weak auth
+
+#### Step 5c Exploitation of xss
+
+## Flag Capture
+
+[Detail the steps leading to the capture of the flag. Include the flag itself (in a spoiler or hidden text, if necessary). Anyone reading this writeup should be able to follow your steps and capture the flag themselves.]
+
+<details>
+<summary>Click to reveal the flag</summary>
+
